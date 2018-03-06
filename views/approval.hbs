@@ -1,0 +1,36 @@
+{{!< layout}}
+<header class="aui-page-header">
+    <div class="aui-page-header-inner">
+        <div class="aui-page-header-main intro-header">
+            <h1>Jira ERES Approval</h1>
+
+            <p class="subtitle">{{title}} for Project: {{project}} Issue: {{issue}}</p>
+        </div>
+    </div>
+</header>
+
+<div class="aui-page-panel main-panel">
+    <div class="aui-page-panel-inner">
+        <section class="aui-page-panel-item">
+            <div class="aui-group">
+                <div class="aui-item">
+                    <p>
+                        <form action="#">
+                            <label for="username">Username: </label>
+                            <input type="text" id="username" name="username"></br>
+
+                            <label for="password">Password: </label>
+                            <input type="password" id="password" name="password"></br>
+
+                            <label for="notes">Notes: </label>
+                            <textarea id="notes" name="notes" rows="3"></textarea></br>
+
+                            <button type="button" id="approve">Approve</button>
+                            <button type="button" id="reject">Reject</button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

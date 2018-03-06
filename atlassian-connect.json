@@ -1,0 +1,44 @@
+{
+    "key": "bsci-jira-eres-approval",
+    "name": "ERES Approvals",
+    "description": "Extends Jira interface to enable the capture of ERES approvals",
+    "vendor": {
+        "name": "Boston Scientific",
+        "url": "https://www.bsci.com"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "links": {
+        "self": "{{localBaseUrl}}/atlassian-connect.json",
+        "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+    },
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "modules": {
+        "webItems":[
+            {
+                "key": "bsci-jira-eres-approval-screen",
+                "location": "jira.issue.tools",
+                "weight": 10,
+                "name": {
+                    "value": "Jira ERES Approval"
+                },
+                "url": "/GetApproval?projectKey={project.key}&issueKey={issue.key}",
+                "target": {
+                    "type": "dialog",
+                    "options": {
+                        "chrome": "false"
+                    }
+
+                }
+
+            }
+        ]
+    }
+}
